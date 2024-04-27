@@ -14,7 +14,7 @@ export class CreatePostInput{
 
     @Field()
     @IsNumber()
-    ownerId:number
+    userId:number
 
 
    

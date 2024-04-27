@@ -2,12 +2,19 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+input CreatePostInput {
+  id: Float!
+  name: String!
+  userId: Float!
+}
+
 input CreateUserInput {
   id: Float!
   name: String!
 }
 
 type Mutation {
+  createPost(createPostInput: CreatePostInput!): Posts!
   createUser(createUserInput: CreateUserInput!): User!
 }
 
@@ -19,8 +26,8 @@ type Posts {
 }
 
 type Query {
-  find: [Posts!]!
-  findOne(id: Int!): Posts!
+  post(id: Int!): Posts!
+  posts: [Posts!]!
   user(id: Int!): User!
 }
 

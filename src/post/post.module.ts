@@ -10,7 +10,6 @@ import { PostService } from "./post.service";
 @Module({
     imports:[TypeOrmModule.forFeature([Posts]),UserModule],
     providers:[PostsResolver,PostService],
-    exports:[]
 
     
 })  
