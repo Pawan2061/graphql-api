@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateUserInput {
+  id: Float!
+  name: String!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+}
+
+type Posts {
+  id: Int!
+  name: String!
+  user: User!
+  userId: Int!
+}
+
+type Query {
+  find: [Posts!]!
+  findOne(id: Int!): Posts!
+  user(id: Int!): User!
+}
+
+type User {
+  id: Int!
+  name: String!
+  posts: [Posts!]
+}
